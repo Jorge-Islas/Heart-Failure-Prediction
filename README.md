@@ -1,57 +1,56 @@
 # Heart-Failure-Prediction
+
 Proyecto para crear un modelo de ML que ayude con la detección temprana de enfermedades cardiovasculares.
 
+## Contexto
 
-## Cosas por hacer
+La **enfermedad arterial coronaria** (Coronary Artery Disease) es una enfermedad en la que se produce un estrechamiento u obstrucción de las arterias coronarias (vasos sanguineos que llevan sangre y oxígeno al corazón).
 
-### Contextualización e Investigación
+![Enfermedad Arterial Coronaria](https://continentalhospitals.com/uploads/Coronary%20Artery%20Diseases.jpg)
 
-1. Revisar descripción de los datos
+**Causa típica de la enfermedad**: La causa de esta enfermedad por lo general es la acumulación de grasa y formación de placas dentro de las arterias coronarias.
 
-2. Definir puntos, conceptos o ideas que no comprenda
+**Síntomas típicos**: Esta enfermedad normalmente causa dolor de pecho, dificultad para respirar durante el ejercicio físico e infartos de miocardio.
 
-3. Investigar y aclarar dudas usando fuentes confiables que justifiquen la información
+**Factores de riesgo**: El riesgo de esta enfermedad aumenta cuando:
+- Hay antecedentes familiares en menores de 50 años de edad
+- Edad avanzada
+- Tabaquismo
+- Hipertensión
+- Colesterol alto
+- Diabetes
+- Falta de ejercicio
+- Obesidad
 
-### Integridad y Calidad de datos (EDA)
+## Conjunto de datos
 
-**Características que se buscan en los datos:**
+El conjunto de datos está compuesto por 12 columnas / features:
 
-- Actuales, precisos y completos
-- Sin duplicados
-- Después de transformarlos no tienen anomalías
+| Feature         | Descipción                                    |
+| --------------- | --------------------------------------------- |
+| Age             | Edad del paciente en años                     |
+| Sex             | Sexo del paciente (M: masculino, F: femenino) |
+| ChestPainType   | Angina = dolor de pecho. TA: Typical angina, ATA: Atypical angina, NAP: Non-Anginal Pain, ASY: Asintomático |
+| RestingBP       | Presión sanguínea en reposo                   |
+| Cholesterol     | Nivel de colesterol sérico / total (lipoproteínas de alta y baja densidad, triglicéridos) en mg/dl (no puede ser 0) |
+| FastingBS       | Un tipo de test de diabetes (1: si el test dio $x>120$ mg/dl, 0: en otro caso) |
+| RestingECG      | Resultados de electrocardiograma en reposo (Normal: Normal, ST: tiene anormalidades ST o T, LVH: signos de hipertrofia ventricular izquierda) |
+| MaxHR           | Ritmo cardiaco máximo alcanzado (60-202) |
+| ExcerciseAngina | El paciente tuvo dolor de pecho a causa de ejercicio (Y: sí, N: no) |
+| Oldpeak         | Depresión ST (en ECG) inducida por el ejercicio comparado con el reposo |
+| ST_Slope        | La pendiente del segmento ST máximo al hacer ejercicio (Up: pendiente positiva, Flat: constante, Down: pendiente negativa) |
+| HeartDisease    | El paciente tiene enfermedad arterial coronaria (1: sí, 0: no) |
 
-**Pasos por realizar:**
+## Referencias
 
-1. Perfilar estructura
-    - Fuentes de datos
-    - Tamaño de datos por fuente
-    - Asignar tipos de datos correctos
+**Enfermedad Arterial Coronaria (NIH):** https://www.cancer.gov/espanol/publicaciones/diccionarios/diccionario-cancer/def/enfermedad-arterial-coronaria
 
-2. Perfilar contenido
-    - Duplicados
-    - Datos faltantes
-    - Patrones de strings (ej. correo electrónico)
-    - Rangos numéricos
-    - Distribución de features
-    - Outliers / Valores atípicos
-    - Datos inconsistentes / Error humano
+**Conjunto de datos obtenido de:**
 
-3. Perfilar relaciones
-    - Tipos de relaciones entre features
-    - Interdependencia entre features
+fedesoriano. (September 2021). Heart Failure Prediction Dataset. Retrieved [Date Retrieved] from https://www.kaggle.com/fedesoriano/heart-failure-prediction.
 
-### Preprocesamiento de datos
+**Fuentes de datos originales recopiladas y preprocesadas por FedeSoriano:**
 
-**Limpieza de datos:**
-
-- Quitar duplicados
-- Quitar variables no significativas o dependientes de otras (feature selection)
-- Quitar outliers
-- Manejo de datos faltantes
-
-**Transformación de datos:**
-
-- Aplicar transformaciones (funciones) biyectivas
-- Normalización / Estandarización
-- Codificar variables categóricas
+- Janosi, A., Steinbrunn, W., Pfisterer, M., & Detrano, R. (1989). Heart Disease [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C52P4X.
+- Statlog (Heart) [Dataset].  UCI Machine Learning Repository. https://doi.org/10.24432/C57303.
 

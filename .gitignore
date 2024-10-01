@@ -163,3 +163,4 @@ cython_debug/
 
 */datos/
 datos/heart.csv
+datos/*
